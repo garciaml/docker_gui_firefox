@@ -1,3 +1,7 @@
 # Based on: https://leimao.github.io/blog/Docker-Container-GUI-Display/
-
+#
+#
+docker build -f firefox.Dockerile -t firefox:0.0.1 .
+xhost +
 docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix firefox:0.0.1
+xhost -
